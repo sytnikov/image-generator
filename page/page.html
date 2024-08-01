@@ -4,17 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Image Generator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="page.css" />
   </head>
 
   <body>
     <div class="container">
-      <h1>AI Image Generator</h1>
-      <p>
-        Write a prompt below (such as): 
-        cat on street, human on moon, apple on chair<br>
-        -> To download images - click on image
-      </p>
+      <header class="header">
+        <img src="../images/logo.svg" alt="extension logo" />
+        <button class="button upgrade-button">
+          <text>Go to Pro</text>
+          <img src="../images/arrow.svg" alt="arrow icon" />
+        </button>
+        <button class="button icon-button">
+          <img src="../images/burger.svg" alt="burger icon" />
+        </button>
+      </header>
+      <h1>Hi 👋</h1>
+      <p>Write a prompt below to get started!</p>
       <form class="gen-form">
         <input
           type="text"
@@ -22,11 +28,14 @@
           placeholder="Type your prompt here..."
           autocomplete="off"
         />
-        <button type="button" id="generate">Generate</button>
+        <button class="button submit-button" type="button" id="generate">
+          <img src="../images/paper-plane.svg" alt="paper plane icon" />
+        </button>
       </form>
       <div class="result">
-        <div id="loading">Generating...
-          <div class="spin">
+        <div id="loading">
+          Generating...
+          <!-- <div class="spin">
             <div class="hourglassBackground">
               <div class="hourglassContainer">
                 <div class="hourglassCurves"></div>
@@ -38,12 +47,12 @@
                 <div class="hourglassGlass"></div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div id="image-grid"></div>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="page.js"></script>
   </body>
 </html>
