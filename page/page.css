@@ -16,19 +16,21 @@ body {
   min-height: 100vh;
 }
 
+.wrapper {
+  display: flex;
+  gap: 30px;
+}
+
 .container {
-  position: relative;
-  width: 22rem;
+  width: 400px;
   color: white;
-  padding: 12px;
-  margin: 10px;
+  margin: 0px 10px;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 6px;
   margin-bottom: 16px;
 }
 
@@ -153,7 +155,7 @@ input:focus {
 }
 
 #image-grid img {
-  max-width: 100%;
+  max-width: 90px;
   border-radius: 10px;
   cursor: pointer;
   border: 2px solid transparent;
@@ -162,4 +164,9 @@ input:focus {
 
 #image-grid img:hover {
   border-color: #cf8bf6;
+}
+
+#enlarged-image {
+  max-width: 100%;
+  border-radius: 10px;
 }

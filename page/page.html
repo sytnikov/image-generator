@@ -8,48 +8,53 @@
   </head>
 
   <body>
-    <div class="container">
-      <header class="header">
-        <img src="../images/logo.svg" alt="extension logo" />
-        <button class="button upgrade-button">
-          <text>Go to Pro</text>
-          <img src="../images/arrow.svg" alt="arrow icon" />
-        </button>
-        <button class="button icon-button">
-          <img src="../images/burger.svg" alt="burger icon" />
-        </button>
-      </header>
-      <h1>Hi 👋</h1>
-      <p>Write a prompt below to get started!</p>
-      <form class="gen-form">
-        <input
-          type="text"
-          id="user-prompt"
-          placeholder="Type your prompt here..."
-          autocomplete="off"
-        />
-        <button class="button submit-button" type="button" id="generate">
-          <img src="../images/paper-plane.svg" alt="paper plane icon" />
-        </button>
-      </form>
-      <div class="result">
-        <div id="loading">
-          Generating...
-          <!-- <div class="spin">
-            <div class="hourglassBackground">
-              <div class="hourglassContainer">
-                <div class="hourglassCurves"></div>
-                <div class="hourglassCapTop"></div>
-                <div class="hourglassGlassTop"></div>
-                <div class="hourglassSand"></div>
-                <div class="hourglassSandStream"></div>
-                <div class="hourglassCapBottom"></div>
-                <div class="hourglassGlass"></div>
+    <div class="wrapper">
+      <div class="container">
+        <header class="header">
+          <img src="../images/logo.svg" alt="extension logo" />
+          <button class="button upgrade-button">
+            <text>Go to Pro</text>
+            <img src="../images/arrow.svg" alt="arrow icon" />
+          </button>
+          <button class="button icon-button">
+            <img src="../images/burger.svg" alt="burger icon" />
+          </button>
+        </header>
+        <h1>Hi 👋</h1>
+        <p>Write a prompt below to get started!</p>
+        <form class="gen-form">
+          <input
+            id="user-prompt"
+            type="text"
+            placeholder="Type your prompt here..."
+            autocomplete="off"
+          />
+          <button id="generate" class="button submit-button" type="button">
+            <img src="../images/paper-plane.svg" alt="paper plane icon" />
+          </button>
+        </form>
+        <div class="result">
+          <div id="loading">
+            Generating...
+            <!-- <div class="spin">
+              <div class="hourglassBackground">
+                <div class="hourglassContainer">
+                  <div class="hourglassCurves"></div>
+                  <div class="hourglassCapTop"></div>
+                  <div class="hourglassGlassTop"></div>
+                  <div class="hourglassSand"></div>
+                  <div class="hourglassSandStream"></div>
+                  <div class="hourglassCapBottom"></div>
+                  <div class="hourglassGlass"></div>
+                </div>
               </div>
-            </div>
-          </div> -->
+            </div> -->
+          </div>
+          <div id="image-grid"></div>
         </div>
-        <div id="image-grid"></div>
+      </div>
+      <div id="enlarged-image-container" style="display: none">
+        <img id="enlarged-image" alt="enlarged image" />
       </div>
     </div>
 
