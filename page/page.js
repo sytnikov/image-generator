@@ -66,7 +66,7 @@ async function generateImages(input) {
       const img = document.createElement("img");
       img.src = imageUrl;
       img.alt = `art-${i + 1}`;
-      img.addEventListener("click", () => showEnlargedImage(imageUrl));
+      img.addEventListener("click", () => showEnlargedImage(imageUrl, i));
       document.getElementById("image-grid").appendChild(img);
     } catch (error) {
       console.error("Error generating image:", error);
@@ -78,20 +78,18 @@ async function generateImages(input) {
   enableGenerateButton();
 }
 
-function showEnlargedImage(imageUrl) {
+function showEnlargedImage(imageUrl, imageNumber) {
   const enlargedImageContainer = document.getElementById(
     "enlarged-image-container"
   );
   const enlargedImage = document.getElementById("enlarged-image");
   enlargedImage.src = imageUrl;
   enlargedImageContainer.style.display = "block";
-}
 
-function downloadImage(imageUrl, imageNumbers) {
-  const link = document.createElement("a");
-  link.href = imageUrl;
-  link.download = `image-${imageNumbers + 1}.png`;
-  link.click();
+  const downloadBtn = document.getElementById("download-btn");
+  downloadBtn.addEventListener("click", () =>
+    downloadImage(imageUrl, imageNumber)
+  );
 }
 
 // event listener for generate button
@@ -100,3 +98,10 @@ generateBtn.addEventListener("click", () => {
   const input = document.getElementById("user-prompt").value;
   generateImages(input);
 });
+
+function downloadImage(imageUrl, imageNumber) {
+  const link = document.createElement("a");
+  link.href = imageUrl;
+  link.download = `image-${imageNumber + 1}.png`;
+  link.click();
+}

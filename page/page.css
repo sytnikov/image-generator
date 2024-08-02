@@ -89,6 +89,7 @@ input:focus {
   align-items: center;
   justify-content: center;
   gap: 4px;
+  transition: all 0.3s ease;
 }
 
 .upgrade-button {
@@ -123,11 +124,25 @@ input:focus {
   border: none;
   height: 44px;
   width: 44px;
-  transition: all 0.3s ease;
 }
 
 .submit-button:hover {
   background: linear-gradient(150deg, #cf8bf6, #724fdf);
+}
+
+.download-button {
+  position: absolute;
+  border: none;
+  outline: none;
+  width: 30px;
+  bottom: 10px;
+  right: 10px;
+  background-color: #cf8bf6;
+  padding: 4px;
+}
+
+.download-button:hover {
+  background-color: #724fdf;
 }
 
 #loading {
@@ -164,6 +179,11 @@ input:focus {
 
 #image-grid img:hover {
   border-color: #cf8bf6;
+}
+
+#enlarged-image-container {
+  position: relative;
+  display: block;
 }
 
 #enlarged-image {
